@@ -22,6 +22,7 @@ public class HelloKafkaProducer {
     public void sendHello(){
         var i = counter.getAndIncrement();
         LOG.info("counter is " + i);
+        LOG.info("counter is " + i);
         kafkaTemplate.send("t-hello", "Hallo number " + i);
     }
 }
